@@ -26,8 +26,10 @@ class Classifier:
         self.header = data[1, :]
         return
 
-    def format_file(self):
+    def str2int(self, test_data: str="coucou") -> np.ndarray:
         """
-        Format a set of data to work only with numbers
+        Format string to int numbers
         """
-        pass
+        tab = np.array(list(test_data))
+
+        return tab.view(np.int32)
